@@ -4,7 +4,7 @@ let blue;
 let yellow;
 let axu;
 let colores = [red, green, blue, yellow];
-let values = [(255,0,0),(0,255,0),(0,0,255),(255,255,0)];
+let values = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)];
 let arr = [];
 let def = [];
 function setup() {
@@ -53,7 +53,6 @@ function setup() {
 function draw() {
     background(0);
     drawSprites();
-
 }
 
 function redReact() {
@@ -61,15 +60,20 @@ function redReact() {
     aux = 1;
     arr.push(aux);
     console.log(arr);
-    pasos();
-
+    if (arr.length === def.length) {
+        pasos();
+        verif();
+    }
 }
 function greenReact() {
     green.shapeColor = color(0, 255, 0);
     aux = 2;
     arr.push(aux);
     console.log(arr);
-    pasos();
+    if (arr.length === def.length) {
+        pasos();
+        verif();
+    }
 }
 
 function blueReact() {
@@ -77,28 +81,39 @@ function blueReact() {
     aux = 3;
     arr.push(aux);
     console.log(arr);
-    pasos();
+    if (arr.length === def.length) {
+        pasos();
+        verif();
+    }
 }
 function yellowReact() {
     yellow.shapeColor = color(255, 255, 0);
     aux = 4;
     arr.push(aux);
     console.log(arr);
-    pasos();
+    if (arr.length === def.length) {
+        pasos();
+        verif();
+
+    }
 }
 
 function pasos() {
     let num = floor(random(1, 5))
     def.push(num);
     console.log(def);
-verif()
+    arr = [];
 }
 
 function verif() {
     let comparacion = false
-    for (let i = 0, z = -1; i < def.length, z < def.length; i++, z++) {
-        if (arr[i+z] === def[i+z]) {
-            arr = [];
+    for (let i = 0; i < def.length; i++) {
+        if (arr[i] === def[i]) {
+            comparacion = true
         }
     }
-}
+    if (comparacion == false) {
+        console.log(comparacion);
+
+    }
+}  
