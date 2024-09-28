@@ -60,9 +60,10 @@ function redReact() {
     aux = 1;
     arr.push(aux);
     console.log(arr);
+    verif();
     if (arr.length === def.length) {
+        
         pasos();
-        verif();
     }
 }
 function greenReact() {
@@ -70,9 +71,9 @@ function greenReact() {
     aux = 2;
     arr.push(aux);
     console.log(arr);
+    verif();
     if (arr.length === def.length) {
         pasos();
-        verif();
     }
 }
 
@@ -81,9 +82,9 @@ function blueReact() {
     aux = 3;
     arr.push(aux);
     console.log(arr);
+    verif();
     if (arr.length === def.length) {
         pasos();
-        verif();
     }
 }
 function yellowReact() {
@@ -91,9 +92,9 @@ function yellowReact() {
     aux = 4;
     arr.push(aux);
     console.log(arr);
+    verif();
     if (arr.length === def.length) {
         pasos();
-        verif();
 
     }
 }
@@ -107,13 +108,13 @@ function pasos() {
 
 function verif() {
     let comparacion = false
-    for (let i = 0; i < def.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if (arr[i] === def[i]) {
             comparacion = true
         }
+        console.log(arr[0]);
     }
     if (comparacion == false) {
-        console.log(comparacion);
-
+   
     }
 }  

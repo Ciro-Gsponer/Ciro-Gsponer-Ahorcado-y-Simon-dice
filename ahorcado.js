@@ -154,6 +154,7 @@ function analizar() {
     if (palabra[z] === mySelect.value()) {
       estaLaLetra = true
       colocarLetra(z)
+      mySelect.disable(mySelect.value());
     }
   }
 
